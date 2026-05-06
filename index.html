@@ -8,95 +8,117 @@
         :root {
             --azul-oscuro: #1e3a5f;
             --azul-medio: #2c5282;
-            --gris-claro: #f0f4fa;
+            --gris-fondo: #f4f6f9;
             --blanco: #ffffff;
-            --verde-wsp: #25D366;
-            --naranja-oferta: #e65100;
+            --verde-wsp: #1b5e20;
+            --verde-boton: #1b5e20;
             --texto: #1a2332;
             --texto-claro: #5a6a82;
+            --borde: #dce2ea;
+            --dorado: #b8960c;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: #edf2f7;
+            background: var(--gris-fondo);
             color: var(--texto);
             line-height: 1.5;
-            font-size: 15px;
+            font-size: 16px;
         }
         .container {
-            max-width: 900px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 0 16px;
+            padding: 0 12px;
         }
         header {
-            background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-medio));
+            background: linear-gradient(135deg, #14273d, var(--azul-oscuro));
             color: var(--blanco);
-            padding: 28px 0 20px;
+            padding: 24px 0 16px;
             text-align: center;
+            border-bottom: 3px solid var(--dorado);
         }
         header h1 {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             letter-spacing: 0.5px;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
         header .nombre {
             font-size: 1rem;
-            opacity: 0.9;
+            opacity: 0.85;
             font-weight: 400;
-            margin-bottom: 0;
         }
         .promo-banner {
-            background: var(--naranja-oferta);
-            color: white;
+            background: var(--azul-oscuro);
+            color: #e0e8f0;
             text-align: center;
             padding: 10px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            border-bottom: 1px solid var(--borde);
+        }
+        .promo-banner span {
+            color: #f0d060;
             font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
         }
         section {
             background: var(--blanco);
-            border-radius: 8px;
-            padding: 20px 16px;
-            margin: 16px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            border: 1px solid #d8e2f0;
+            border-radius: 10px;
+            padding: 18px 14px;
+            margin: 14px 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            border: 1px solid var(--borde);
         }
         h2 {
             color: var(--azul-oscuro);
             font-size: 1.2rem;
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            margin-bottom: 12px;
         }
         .producto-accordion {
-            border: 1px solid #d8e2f0;
-            border-radius: 8px;
-            margin-bottom: 12px;
+            border: 1px solid var(--borde);
+            border-radius: 10px;
+            margin-bottom: 10px;
             background: #fff;
+            overflow: hidden;
         }
         .producto-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px 16px;
+            padding: 14px 14px;
             cursor: pointer;
-            background: #f9fafc;
-            border-radius: 8px;
+            background: #fafbfc;
             transition: background 0.2s;
+            gap: 10px;
+            flex-wrap: wrap;
         }
-        .producto-header:hover {
-            background: #f0f4fa;
-        }
+        .producto-header:hover { background: #f1f4f8; }
         .producto-titulo {
             font-weight: 700;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             color: var(--azul-oscuro);
             display: flex;
             align-items: center;
             gap: 8px;
             flex-wrap: wrap;
+            flex: 1;
+            min-width: 180px;
+        }
+        .producto-titulo .detalle-link {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--azul-medio);
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .chevron {
+            font-size: 0.8rem;
+            transition: transform 0.2s;
+        }
+        .producto-header.open .chevron {
+            transform: rotate(180deg);
         }
         .producto-precios {
             display: flex;
@@ -107,20 +129,20 @@
         .precio-normal {
             text-decoration: line-through;
             color: var(--texto-claro);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             white-space: nowrap;
         }
         .precio-oferta {
             font-weight: 700;
-            color: var(--naranja-oferta);
-            font-size: 1.1rem;
+            color: var(--verde-boton);
+            font-size: 1.05rem;
             white-space: nowrap;
         }
         .btn-wsp {
             background: var(--verde-wsp);
             color: white;
             text-decoration: none;
-            padding: 8px 16px;
+            padding: 9px 16px;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
@@ -130,28 +152,28 @@
             transition: background 0.2s;
             white-space: nowrap;
         }
-        .btn-wsp:hover { background: #1da851; }
+        .btn-wsp:hover { background: #144018; }
         .producto-body {
             display: none;
-            padding: 0 16px 16px;
-            font-size: 0.95rem;
+            padding: 0 14px 14px;
+            font-size: 0.9rem;
             line-height: 1.6;
+            color: var(--texto);
+            border-top: 1px solid var(--borde);
         }
-        .producto-body.open {
-            display: block;
-        }
+        .producto-body.open { display: block; }
         .producto-body h4 {
             color: var(--azul-medio);
             margin: 12px 0 6px;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
         .producto-body ul {
             list-style: none;
             padding-left: 0;
-            margin: 8px 0;
+            margin: 6px 0;
         }
         .producto-body ul li {
-            padding: 5px 0;
+            padding: 4px 0;
             display: flex;
             align-items: flex-start;
             gap: 8px;
@@ -161,63 +183,56 @@
             color: #2e7d32;
             font-weight: bold;
             margin-right: 4px;
+            flex-shrink: 0;
         }
         .producto-body .no-incluye li:before {
             content: "❌";
-            color: #c62828;
+            color: #b71c1c;
             font-weight: bold;
-        }
-        .chevron {
-            font-size: 1.2rem;
-            color: var(--texto-claro);
-            transition: transform 0.2s;
-            margin-left: 8px;
-        }
-        .producto-header.open .chevron {
-            transform: rotate(180deg);
         }
         .badge {
-            background: var(--naranja-oferta);
-            color: white;
+            background: var(--dorado);
+            color: #fff;
             font-size: 0.7rem;
-            font-weight: bold;
+            font-weight: 700;
             padding: 2px 8px;
             border-radius: 10px;
-            margin-left: 6px;
+            letter-spacing: 0.3px;
         }
         .info {
-            background: #e8f0fb;
+            background: #eaf0f8;
             border-left: 4px solid var(--azul-medio);
             padding: 10px 14px;
             border-radius: 0 6px 6px 0;
-            font-size: 0.95rem;
-            margin: 12px 0;
+            font-size: 0.9rem;
+            margin: 10px 0;
         }
         footer {
             background: var(--azul-oscuro);
             color: rgba(255,255,255,0.85);
-            padding: 20px 0;
+            padding: 18px 0;
             text-align: center;
-            font-size: 0.9rem;
-            margin-top: 24px;
+            font-size: 0.8rem;
+            margin-top: 20px;
         }
         .social-links {
-            margin: 12px 0 6px;
+            margin: 10px 0 4px;
             display: flex;
             justify-content: center;
-            gap: 14px;
+            gap: 12px;
             flex-wrap: wrap;
         }
         .social-links a {
-            background: rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.1);
             padding: 6px 14px;
-            border-radius: 4px;
+            border-radius: 6px;
             font-weight: 500;
             color: white;
             text-decoration: none;
             transition: background 0.2s;
+            font-size: 0.9rem;
         }
-        .social-links a:hover { background: rgba(255,255,255,0.25); }
+        .social-links a:hover { background: rgba(255,255,255,0.2); }
         .wsp-flotante {
             position: fixed;
             bottom: 20px;
@@ -231,16 +246,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
             font-size: 28px;
             transition: transform 0.2s;
             text-decoration: none;
         }
         .wsp-flotante:hover { transform: scale(1.07); }
-        @media (max-width: 600px) {
+        @media (max-width: 480px) {
+            body { font-size: 15px; }
             header h1 { font-size: 1.3rem; }
-            .producto-header { flex-direction: column; align-items: flex-start; gap: 10px; }
-            .producto-precios { width: 100%; justify-content: space-between; }
+            .producto-header { padding: 12px 10px; }
+            .btn-wsp { padding: 8px 14px; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -248,140 +264,140 @@
 
 <header>
     <div class="container">
-        <h1>🛠️ Aplicativos de Ingeniería Civil</h1>
+        <h1>📐 Aplicativos de Ingeniería Civil</h1>
         <p class="nombre">por Luis Miguel Cruz Efus</p>
-        <p style="font-size:0.85rem;opacity:0.8;margin-top:4px;">Herramientas autocontenidas · Normas peruanas actualizadas</p>
     </div>
 </header>
 
 <div class="promo-banner" id="bannerPromo">
-    ⏰ PRECIO DE LANZAMIENTO válido hasta el <span id="fechaLimite"></span>
+    ⏰ Precio de lanzamiento hasta el <span id="fechaLimite"></span>
 </div>
 
 <main class="container">
 
-    <!-- Catálogo -->
     <section>
-        <h2>📦 Catálogo de Aplicativos</h2>
+        <h2>📦 Catálogo</h2>
 
         <!-- ① Asistente Sísmico -->
         <div class="producto-accordion">
             <div class="producto-header" onclick="toggleProducto(this)">
-                <div class="producto-titulo">① Asistente Sísmico E.030-2026 v5 <span class="badge">ACTUALIZADO</span></div>
+                <div class="producto-titulo">
+                    ① Asistente Sísmico E.030-2026 v5 <span class="badge">ACTUALIZADO</span>
+                    <span class="detalle-link">Detalles <span class="chevron">▼</span></span>
+                </div>
                 <div class="producto-precios">
                     <span class="precio-normal">S/59</span>
                     <span class="precio-oferta">S/39</span>
                     <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20el%20Asistente%20Sísmico%20E.030-2026" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
                 </div>
-                <span class="chevron">▼</span>
             </div>
             <div class="producto-body">
                 <h4>✅ Qué incluye</h4>
                 <ul>
                     <li>Cálculo direccional X/Y/Z con Rx y Ry independientes.</li>
-                    <li>Espectros de pseudo-aceleraciones X, Y, Z exportables a TXT para ETABS/Robot.</li>
-                    <li>Verificación automática de irregularidades (Tablas N°11 y N°12) por dirección.</li>
-                    <li>Restricciones de Tabla N°9 (sistemas permitidos por categoría/zona).</li>
-                    <li>Control de Tabla N°13 (irregularidades prohibidas) con marca de no conformidad.</li>
-                    <li>Validación estricta de Ts ≤ 0.65·Tp (Art. 14.8) con bloqueo de cálculos.</li>
-                    <li>Cortante basal, distribución de fuerzas, torsión accidental y separación.</li>
+                    <li>Espectros de pseudo-aceleraciones X, Y, Z exportables a TXT.</li>
+                    <li>Verificación automática de irregularidades (Tablas N°11 y N°12).</li>
+                    <li>Restricciones de Tabla N°9 y N°13 con marcas de no conformidad.</li>
+                    <li>Validación estricta de Ts ≤ 0.65·Tp (Art. 14.8).</li>
+                    <li>Cortante basal, distribución de fuerzas, torsión accidental.</li>
                     <li>Memoria de parámetros imprimible.</li>
                 </ul>
                 <h4 class="no-incluye">❌ Qué NO incluye</h4>
                 <ul class="no-incluye">
-                    <li>No es un software de análisis estructural (no modela pórticos ni muros).</li>
-                    <li>No sustituye al ingeniero estructural responsable ni al EMS.</li>
-                    <li>No considera interacción suelo‑estructura ni análisis no lineal.</li>
+                    <li>No es un software de análisis estructural (no modela pórticos).</li>
+                    <li>No sustituye al ingeniero estructural ni al EMS.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- ② Pavimentos AASHTO 93 -->
+        <!-- ② Pavimentos -->
         <div class="producto-accordion">
             <div class="producto-header" onclick="toggleProducto(this)">
-                <div class="producto-titulo">② Pavimentos AASHTO 93 – MTC</div>
+                <div class="producto-titulo">
+                    ② Pavimentos AASHTO 93 – MTC
+                    <span class="detalle-link">Detalles <span class="chevron">▼</span></span>
+                </div>
                 <div class="producto-precios">
                     <span class="precio-normal">S/69</span>
                     <span class="precio-oferta">S/49</span>
-                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20el%20aplicativo%20de%20Pavimentos%20AASHTO%2093" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
+                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20Pavimentos%20AASHTO%2093" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
                 </div>
-                <span class="chevron">▼</span>
             </div>
             <div class="producto-body">
                 <h4>✅ Qué incluye</h4>
                 <ul>
                     <li>Cálculo de Ejes Equivalentes W18 (directo o desde IMD).</li>
-                    <li>Determinación automática del Módulo de Resiliencia Mr a partir del CBR.</li>
-                    <li>Resolución de la ecuación AASHTO 93 por bisección numérica iterativa.</li>
-                    <li>Distribución en tres capas estructurales (carpeta, base, subbase).</li>
+                    <li>Módulo de Resiliencia Mr a partir del CBR.</li>
+                    <li>Resolución de la ecuación AASHTO 93 por bisección numérica.</li>
+                    <li>Distribución en tres capas (carpeta, base, subbase).</li>
                     <li>Verificación de espesores mínimos según Cuadro 12.17 MTC.</li>
-                    <li>Sección transversal del pavimento en SVG y memoria de cálculo paso a paso.</li>
+                    <li>Sección transversal SVG y memoria de cálculo paso a paso.</li>
                 </ul>
                 <h4 class="no-incluye">❌ Qué NO incluye</h4>
                 <ul class="no-incluye">
-                    <li>No realiza diseño de mezclas asfálticas ni dosificación.</li>
-                    <li>No incluye metrados, costos ni presupuestos de obra.</li>
-                    <li>No modela pavimentos en 2D/3D.</li>
-                    <li>No sustituye el Estudio de Mecánica de Suelos ni el Estudio de Tráfico oficiales.</li>
+                    <li>No realiza diseño de mezclas asfálticas.</li>
+                    <li>No incluye metrados ni presupuestos.</li>
+                    <li>No sustituye el EMS ni el Estudio de Tráfico.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- ③ Escaleras de Concreto -->
+        <!-- ③ Escaleras -->
         <div class="producto-accordion">
             <div class="producto-header" onclick="toggleProducto(this)">
-                <div class="producto-titulo">③ Escaleras de Concreto Armado</div>
+                <div class="producto-titulo">
+                    ③ Escaleras de Concreto Armado
+                    <span class="detalle-link">Detalles <span class="chevron">▼</span></span>
+                </div>
                 <div class="producto-precios">
                     <span class="precio-normal">S/59</span>
                     <span class="precio-oferta">S/39</span>
-                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20el%20aplicativo%20de%20Escaleras%20de%20Concreto" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
+                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20Escaleras%20de%20Concreto" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
                 </div>
-                <span class="chevron">▼</span>
             </div>
             <div class="producto-body">
                 <h4>✅ Qué incluye</h4>
                 <ul>
                     <li>Cálculo geométrico con verificación de Blondel (2CP+P).</li>
-                    <li>Análisis estructural de tramo con descanso(s) y apoyos variables.</li>
-                    <li>Diseño de acero longitudinal (balancín positivo y bastones negativos).</li>
+                    <li>Análisis estructural con descanso(s) y apoyos variables.</li>
+                    <li>Diseño de acero longitudinal (balancín + bastones).</li>
                     <li>Acero de temperatura y verificación de cortante.</li>
-                    <li>Esquema de detalle longitudinal con SVG acotado.</li>
+                    <li>Esquema de detalle longitudinal en SVG.</li>
                 </ul>
                 <h4 class="no-incluye">❌ Qué NO incluye</h4>
                 <ul class="no-incluye">
-                    <li>No modela escaleras curvas, helicoidales ni compensadas.</li>
-                    <li>No incluye detallado de estribos ni planos constructivos.</li>
-                    <li>No sustituye el análisis estructural completo del edificio.</li>
+                    <li>No modela escaleras curvas ni helicoidales.</li>
+                    <li>No incluye planos constructivos.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- ④ Sistema de Bombeo -->
+        <!-- ④ Bombeo -->
         <div class="producto-accordion">
             <div class="producto-header" onclick="toggleProducto(this)">
-                <div class="producto-titulo">④ Sistema de Bombeo e Impulsión</div>
+                <div class="producto-titulo">
+                    ④ Sistema de Bombeo e Impulsión
+                    <span class="detalle-link">Detalles <span class="chevron">▼</span></span>
+                </div>
                 <div class="producto-precios">
                     <span class="precio-normal">S/69</span>
                     <span class="precio-oferta">S/49</span>
-                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20el%20aplicativo%20de%20Sistema%20de%20Bombeo" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
+                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20Sistema%20de%20Bombeo" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
                 </div>
-                <span class="chevron">▼</span>
             </div>
             <div class="producto-body">
                 <h4>✅ Qué incluye</h4>
                 <ul>
-                    <li>Dimensionamiento de tuberías de succión e impulsión (multitramo).</li>
-                    <li>Pérdidas por fricción (Hazen-Williams + Darcy-Weisbach) y accesorios.</li>
-                    <li>Cálculo de altura dinámica total (HDT), potencia hidráulica y del motor.</li>
-                    <li>Análisis NPSH disponible y verificación de cavitación.</li>
-                    <li>Golpe de ariete: celeridad, sobrepresión, riesgo y recomendaciones.</li>
-                    <li>Ficha técnica para cotización de bombas y esquema SVG del sistema.</li>
+                    <li>Dimensionamiento de succión e impulsión (multitramo).</li>
+                    <li>Pérdidas por fricción (Hazen-Williams + Darcy-Weisbach).</li>
+                    <li>Cálculo de HDT, potencia hidráulica y del motor.</li>
+                    <li>Análisis NPSH disponible y golpe de ariete.</li>
+                    <li>Ficha técnica para cotización de bombas.</li>
                 </ul>
                 <h4 class="no-incluye">❌ Qué NO incluye</h4>
                 <ul class="no-incluye">
-                    <li>No selecciona la bomba comercial (da parámetros para cotizar).</li>
-                    <li>No dimensiona el sistema eléctrico ni el tablero de control.</li>
-                    <li>No sustituye el diseño hidráulico completo del sistema de distribución.</li>
+                    <li>No selecciona la bomba comercial.</li>
+                    <li>No dimensiona el sistema eléctrico.</li>
                 </ul>
             </div>
         </div>
@@ -389,27 +405,27 @@
         <!-- ⑤ Aparatos Sanitarios -->
         <div class="producto-accordion">
             <div class="producto-header" onclick="toggleProducto(this)">
-                <div class="producto-titulo">⑤ Aparatos Sanitarios IS.010</div>
+                <div class="producto-titulo">
+                    ⑤ Aparatos Sanitarios IS.010
+                    <span class="detalle-link">Detalles <span class="chevron">▼</span></span>
+                </div>
                 <div class="producto-precios">
                     <span class="precio-normal">S/49</span>
                     <span class="precio-oferta">S/29</span>
-                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20el%20aplicativo%20de%20Aparatos%20Sanitarios%20IS.010" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
+                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20Aparatos%20Sanitarios%20IS.010" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
                 </div>
-                <span class="chevron">▼</span>
             </div>
             <div class="producto-body">
                 <h4>✅ Qué incluye</h4>
                 <ul>
-                    <li>Cálculo modular por tipo de uso según IS.010 (comercio, educación, industria, etc.).</li>
-                    <li>Generación de resumen por grupo: Hombres, Mujeres, Niños y Unisex.</li>
-                    <li>Actualización automática al cambiar parámetros de entrada.</li>
-                    <li>Exportación e importación de datos en formato JSON.</li>
-                    <li>Impresión en PDF con orientación horizontal o vertical.</li>
+                    <li>Cálculo modular por tipo de uso según IS.010.</li>
+                    <li>Resumen por grupo: Hombres, Mujeres, Niños y Unisex.</li>
+                    <li>Exportación e importación de datos en JSON.</li>
+                    <li>Impresión en PDF con orientación ajustable.</li>
                 </ul>
                 <h4 class="no-incluye">❌ Qué NO incluye</h4>
                 <ul class="no-incluye">
-                    <li>No dibuja planos arquitectónicos ni la distribución de baños.</li>
-                    <li>No sustituye el criterio del ingeniero sanitario para la ubicación de aparatos.</li>
+                    <li>No dibuja planos arquitectónicos.</li>
                 </ul>
             </div>
         </div>
@@ -417,172 +433,167 @@
         <!-- ⑥ Biodigestor -->
         <div class="producto-accordion">
             <div class="producto-header" onclick="toggleProducto(this)">
-                <div class="producto-titulo">⑥ Biodigestor Prefabricado</div>
+                <div class="producto-titulo">
+                    ⑥ Biodigestor Prefabricado
+                    <span class="detalle-link">Detalles <span class="chevron">▼</span></span>
+                </div>
                 <div class="producto-precios">
                     <span class="precio-normal">S/49</span>
                     <span class="precio-oferta">S/29</span>
-                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20el%20aplicativo%20de%20Biodigestor" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
+                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20Biodigestor" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
                 </div>
-                <span class="chevron">▼</span>
             </div>
             <div class="producto-body">
                 <h4>✅ Qué incluye</h4>
                 <ul>
-                    <li>Cálculo del volumen de sedimentación (Vs) y digestión de lodos (Vd) según IS.020.</li>
-                    <li>Selección automática de la capacidad comercial más cercana.</li>
-                    <li>Tabla interactiva de tasas de acumulación de lodos (ta) según temperatura y limpieza.</li>
-                    <li>Esquema SVG del biodigestor con zonas de sedimentación y digestión.</li>
-                    <li>Alternativas de combinación de unidades para cubrir la demanda.</li>
+                    <li>Cálculo de Vs y Vd según IS.020.</li>
+                    <li>Selección automática de capacidad comercial.</li>
+                    <li>Tabla interactiva de tasas de acumulación de lodos.</li>
+                    <li>Esquema SVG del biodigestor.</li>
                 </ul>
                 <h4 class="no-incluye">❌ Qué NO incluye</h4>
                 <ul class="no-incluye">
-                    <li>No diseña el sistema de post-tratamiento (zanjas, humedales, etc.).</li>
-                    <li>No modela la calidad del efluente ni la remoción de contaminantes.</li>
+                    <li>No diseña el sistema de post-tratamiento.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- ⑦ Dotaciones de Agua -->
+        <!-- ⑦ Dotaciones -->
         <div class="producto-accordion">
             <div class="producto-header" onclick="toggleProducto(this)">
-                <div class="producto-titulo">⑦ Dotaciones de Agua Fría IS.010</div>
+                <div class="producto-titulo">
+                    ⑦ Dotaciones de Agua Fría IS.010
+                    <span class="detalle-link">Detalles <span class="chevron">▼</span></span>
+                </div>
                 <div class="producto-precios">
                     <span class="precio-normal">S/49</span>
                     <span class="precio-oferta">S/29</span>
-                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20el%20aplicativo%20de%20Dotaciones%20IS.010" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
+                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20Dotaciones%20IS.010" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
                 </div>
-                <span class="chevron">▼</span>
             </div>
             <div class="producto-body">
                 <h4>✅ Qué incluye</h4>
                 <ul>
-                    <li>Cálculo de dotaciones para todos los tipos de uso de la IS.010.</li>
-                    <li>Viviendas unifamiliares según área del lote con interpolación normativa.</li>
-                    <li>Viviendas multifamiliares por número de dormitorios.</li>
-                    <li>Comercio, oficinas, industria, educación, espectáculos, piscinas y más.</li>
-                    <li>Determinación automática del volumen de cisterna y tanque elevado.</li>
-                    <li>Exportación e importación de datos en JSON.</li>
+                    <li>Todos los tipos de uso de la IS.010.</li>
+                    <li>Viviendas unifamiliares y multifamiliares por área/dormitorios.</li>
+                    <li>Comercio, oficinas, industria, educación, piscinas y más.</li>
+                    <li>Volumen de cisterna y tanque elevado automático.</li>
                 </ul>
                 <h4 class="no-incluye">❌ Qué NO incluye</h4>
                 <ul class="no-incluye">
-                    <li>No dimensiona redes de distribución de agua.</li>
-                    <li>No sustituye el estudio de factibilidad de suministro.</li>
+                    <li>No dimensiona redes de distribución.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- ⑧ Cálculo Hidráulico Red de Agua -->
+        <!-- ⑧ Red de Agua -->
         <div class="producto-accordion">
             <div class="producto-header" onclick="toggleProducto(this)">
-                <div class="producto-titulo">⑧ Cálculo Hidráulico – Red de Agua</div>
+                <div class="producto-titulo">
+                    ⑧ Cálculo Hidráulico – Red de Agua
+                    <span class="detalle-link">Detalles <span class="chevron">▼</span></span>
+                </div>
                 <div class="producto-precios">
                     <span class="precio-normal">S/49</span>
                     <span class="precio-oferta">S/29</span>
-                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20el%20aplicativo%20de%20Cálculo%20Hidráulico%20Red%20de%20Agua" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
+                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20Red%20de%20Agua" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
                 </div>
-                <span class="chevron">▼</span>
             </div>
             <div class="producto-body">
                 <h4>✅ Qué incluye</h4>
                 <ul>
-                    <li>Tabla de ruta crítica con cálculo tramo por tramo.</li>
-                    <li>Pérdidas por fricción con Darcy-Weisbach (Swamee-Jain) y Hazen-Williams.</li>
-                    <li>Verificación de velocidades (0.6–3.0 m/s) y presiones mínimas.</li>
-                    <li>Catálogo de accesorios con coeficientes K (Tee, codo, válvulas, etc.).</li>
-                    <li>Propiedades del agua según temperatura.</li>
+                    <li>Tabla de ruta crítica tramo por tramo.</li>
+                    <li>Pérdidas por fricción (Darcy-Weisbach + Hazen-Williams).</li>
+                    <li>Verificación de velocidades (0.6–3.0 m/s).</li>
+                    <li>Catálogo de accesorios con coeficientes K.</li>
                 </ul>
                 <h4 class="no-incluye">❌ Qué NO incluye</h4>
                 <ul class="no-incluye">
-                    <li>No modela redes malladas ni sistemas con múltiples ramales.</li>
-                    <li>No dimensiona equipos de bombeo ni cisternas.</li>
+                    <li>No modela redes malladas.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- ⑨ Cálculo Red de Desagüe -->
+        <!-- ⑨ Red de Desagüe -->
         <div class="producto-accordion">
             <div class="producto-header" onclick="toggleProducto(this)">
-                <div class="producto-titulo">⑨ Cálculo Red de Desagüe</div>
+                <div class="producto-titulo">
+                    ⑨ Cálculo Red de Desagüe
+                    <span class="detalle-link">Detalles <span class="chevron">▼</span></span>
+                </div>
                 <div class="producto-precios">
                     <span class="precio-normal">S/49</span>
                     <span class="precio-oferta">S/29</span>
-                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20el%20aplicativo%20de%20Cálculo%20Red%20de%20Desagüe" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
+                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20Red%20de%20Desagüe" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
                 </div>
-                <span class="chevron">▼</span>
             </div>
             <div class="producto-body">
                 <h4>✅ Qué incluye</h4>
                 <ul>
-                    <li>Cálculo de unidades de descarga (UD) por tramo según tipo de aparato.</li>
-                    <li>Conversión de UD a caudal por Hunter para desagüe.</li>
+                    <li>Cálculo de unidades de descarga (UD) por tramo.</li>
+                    <li>Conversión UD a caudal por Hunter.</li>
                     <li>Verificación de diámetros y pendientes según IS.010.</li>
-                    <li>Cálculo de velocidades en tubería parcialmente llena (75% D).</li>
-                    <li>Control de pendientes mínimas por diámetro.</li>
+                    <li>Velocidades en tubería parcialmente llena (75% D).</li>
                 </ul>
                 <h4 class="no-incluye">❌ Qué NO incluye</h4>
                 <ul class="no-incluye">
-                    <li>No modela el sistema de ventilación de la red.</li>
-                    <li>No calcula cotas de fondo definitivas ni perfiles longitudinales.</li>
+                    <li>No modela el sistema de ventilación.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- ⑩ Zanjas de Infiltración -->
+        <!-- ⑩ Zanjas -->
         <div class="producto-accordion">
             <div class="producto-header" onclick="toggleProducto(this)">
-                <div class="producto-titulo">⑩ Zanjas de Infiltración</div>
+                <div class="producto-titulo">
+                    ⑩ Zanjas de Infiltración
+                    <span class="detalle-link">Detalles <span class="chevron">▼</span></span>
+                </div>
                 <div class="producto-precios">
                     <span class="precio-normal">S/49</span>
                     <span class="precio-oferta">S/29</span>
-                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20el%20aplicativo%20de%20Zanjas%20de%20Infiltración" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
+                    <a class="btn-wsp" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20Zanjas%20de%20Infiltración" target="_blank" onclick="event.stopPropagation()">💬 Comprar</a>
                 </div>
-                <span class="chevron">▼</span>
             </div>
             <div class="producto-body">
                 <h4>✅ Qué incluye</h4>
                 <ul>
                     <li>Diseño de campo de percolación según IS.020.</li>
-                    <li>Cálculo del coeficiente de infiltración R en función del test de percolación.</li>
-                    <li>Verificación de separación mínima al nivel freático (≥ 2.0 m).</li>
-                    <li>Dimensionamiento de número de líneas y longitud por línea.</li>
-                    <li>Cálculo del volumen de grava requerido.</li>
+                    <li>Coeficiente de infiltración R según test de percolación.</li>
+                    <li>Verificación de separación al nivel freático.</li>
                     <li>Esquema en planta del campo de percolación.</li>
                 </ul>
                 <h4 class="no-incluye">❌ Qué NO incluye</h4>
                 <ul class="no-incluye">
-                    <li>No modela el flujo subsuperficial ni la saturación del suelo.</li>
-                    <li>No sustituye el test de percolación real en campo.</li>
+                    <li>No modela el flujo subsuperficial.</li>
+                    <li>No sustituye el test de percolación real.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Descuento futuro -->
-        <div class="info" style="margin-top: 16px;">
+        <div class="info">
             🎁 <strong>20% de descuento en futuros lanzamientos</strong> (muros de corte, columnas, vigas rectangulares) para clientes que hayan adquirido cualquier aplicativo.
         </div>
     </section>
 
-    <!-- Garantía y soporte -->
     <section>
         <h2>✅ Garantía y soporte</h2>
         <div class="info">
-            ✔️ <strong>Actualizaciones y optimizaciones</strong> si cambia la norma o por sugerencias de los usuarios.<br>
+            ✔️ <strong>Actualizaciones y optimizaciones</strong> si cambia la norma o por sugerencias.<br>
             ✔️ Envío inmediato por WhatsApp tras el pago.<br>
             ✔️ Soporte directo con el ingeniero creador.<br>
-            ✔️ Aplicativos autocontenidos: no requieren instalación, solo abrir el archivo .html.<br>
+            ✔️ Aplicativos autocontenidos: solo abrir el archivo .html.<br>
             ✔️ <strong>Compatible con cualquier dispositivo:</strong> celular, tablet, laptop o PC.<br>
             ✔️ <strong>Funciona en cualquier navegador:</strong> Chrome, Edge, Firefox, Safari, Opera.
         </div>
     </section>
 
-    <!-- Redes sociales -->
     <section>
         <h2>📲 Conéctate conmigo</h2>
-        <p style="margin-bottom:12px;">Sígueme para ver demos de las herramientas, análisis normativos y más contenido de ingeniería.</p>
         <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center;">
-            <a href="https://www.tiktok.com/@efus60" target="_blank" style="color:#000;font-weight:600;">🎵 TikTok</a>
-            <a href="https://www.youtube.com/@lmingenieria-x1f" target="_blank" style="color:#c4302b;font-weight:600;">▶️ YouTube</a>
-            <a href="https://wa.me/51926179993" target="_blank" style="color:#25D366;font-weight:600;">💬 WhatsApp</a>
+            <a href="https://www.tiktok.com/@efus60" target="_blank" style="color:#1e3a5f;font-weight:600;">🎵 TikTok</a>
+            <a href="https://www.youtube.com/@lmingenieria-x1f" target="_blank" style="color:#1e3a5f;font-weight:600;">▶️ YouTube</a>
+            <a href="https://wa.me/51926179993" target="_blank" style="color:#1b5e20;font-weight:600;">💬 WhatsApp</a>
         </div>
     </section>
 
@@ -596,11 +607,10 @@
             <a href="https://www.youtube.com/@lmingenieria-x1f">YouTube</a>
             <a href="https://wa.me/51926179993">WhatsApp</a>
         </div>
-        <p style="font-size:0.75rem;opacity:0.7;">Aplicativos de apoyo al diseño — no sustituyen el criterio del ingeniero responsable.</p>
+        <p style="font-size:0.7rem;opacity:0.7;">Aplicativos de apoyo al diseño — no sustituyen el criterio del ingeniero responsable.</p>
     </div>
 </footer>
 
-<!-- WhatsApp flotante -->
 <a class="wsp-flotante" href="https://wa.me/51926179993" target="_blank" aria-label="Chatea en WhatsApp">💬</a>
 
 <script>
@@ -609,8 +619,6 @@
         body.classList.toggle('open');
         header.classList.toggle('open');
     }
-
-    // Fecha límite dinámica (2 días a partir de hoy)
     (function() {
         const fechaLimite = new Date();
         fechaLimite.setDate(fechaLimite.getDate() + 2);
