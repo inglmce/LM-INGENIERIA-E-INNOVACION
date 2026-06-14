@@ -848,14 +848,14 @@
     <span class="ttl">Catálogo por Especialidad</span>
     <span class="line"></span>
   </div>
-  <p class="section-lead">Doce aplicativos disponibles, organizados por área. Seguiremos sumando más herramientas para estructuras, hidráulica y plantas de tratamiento.</p>
+  <p class="section-lead">Dieciséis aplicativos disponibles, organizados por área. Seguiremos sumando más herramientas para estructuras, hidráulica y plantas de tratamiento.</p>
 
   <!-- ========== ESTRUCTURAS ========== -->
   <div class="cat open">
     <div class="cat-bar" onclick="toggleCat(this)">
       <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path><path d="M9 11h6"></path></svg>
       <span class="cat-name">Estructuras</span>
-      <span class="cat-count">5 aplicativos</span>
+      <span class="cat-count">6 aplicativos</span>
       <svg class="cat-chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"></path></svg>
     </div>
     <div class="cat-wrap">
@@ -1161,6 +1161,64 @@
         </div>
       </article>
 
+      <!-- 06 Reservorio Rectangular -->
+      <article class="acc">
+        <div class="acc-head" onclick="toggleAcc(this)">
+          <div class="acc-title">
+            <span class="acc-num">06</span>
+            <span class="acc-name">Reservorio Rectangular — ACI 350 + Robot <span class="badge new">Nuevo</span></span>
+          </div>
+          <div class="pricebox">
+            <div class="pricebox-left">
+              <div class="px-old-row">
+                <span class="px-antes">Antes</span>
+                <span class="px-old">S/ 249</span>
+                <span class="px-save">−28%</span>
+              </div>
+              <div class="px-now-row">
+                <span class="px-now"><span class="cur">S/</span>180</span>
+                <span class="px-launch"><svg><use href="#ico-bolt"></use></svg>Lanzamiento</span>
+              </div>
+            </div>
+            <div class="pricebox-right">
+              <span class="px-save-amt">Ahorras<br><b>S/ 69</b></span>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn btn-buy" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20Reservorio%20Rectangular%20ACI%20350" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-wa"></use></svg>
+              Comprar por WhatsApp
+            </a>
+            <button class="btn btn-toggle" onclick="event.stopPropagation();toggleAcc(this.closest('.acc').querySelector('.acc-head'))">
+              Detalles <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"></path></svg>
+            </button>
+          </div>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <h4 class="ok"><svg class="h-ico"><use href="#ico-check"></use></svg>Qué incluye</h4>
+            <ul>
+              <li>Memoria de cálculo completa (§1 a §10) para reservorios rectangulares de concreto armado contenedores de líquido.</li>
+              <li>Cargas hidrostáticas por bandas, empuje de suelo (Rankine) y presión sísmica dinámica según ACI 350.3-20.</li>
+              <li>Generación automática del modelo FEM en Autodesk Robot: geometría, materiales, mallado, cargas y 22 combinaciones.</li>
+              <li>Importación de resultados de Robot con envolvente de momentos por grupo (muros, fondo, techo) y criterio Wood &amp; Armer.</li>
+              <li>Diseño del refuerzo a flexotracción con demanda sanitaria ACI 350-20 y cuantías mínimas diferenciadas.</li>
+              <li>Verificación de estabilidad global: flotación, deslizamiento, volteo y presión de contacto.</li>
+              <li>Diagramas SVG de presiones, armado y cortes integrados en la memoria.</li>
+              <li>Guardado del proyecto en JSON e impresión de memoria en PDF A4.</li>
+            </ul>
+            <h4 class="no"><svg class="h-ico"><use href="#ico-x"></use></svg>Qué NO incluye</h4>
+            <ul class="no">
+              <li>No es una app web; funciona en escritorio Windows con .NET 8 y requiere Autodesk Robot Structural Analysis.</li>
+              <li>No diseña reservorios circulares, elevados, metálicos ni prefabricados.</li>
+              <li>No reemplaza la revisión de juntas constructivas, impermeabilización ni detalles de obra.</li>
+              <li>No valida la calidad del modelo en Robot ni corrige automáticamente errores de modelamiento.</li>
+              <li>No sustituye el criterio del ingeniero ni la revisión integral de ACI 350-20 y E.060.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
     </div>
     </div>
   </div>
@@ -1176,11 +1234,11 @@
     <div class="cat-wrap">
     <div class="cat-stack">
 
-      <!-- 06 Pavimentos AASHTO 93 -->
+      <!-- 07 Pavimentos AASHTO 93 -->
       <article class="acc">
         <div class="acc-head" onclick="toggleAcc(this)">
           <div class="acc-title">
-            <span class="acc-num">06</span>
+            <span class="acc-num">07</span>
             <span class="acc-name">Pavimentos Flexibles AASHTO 93 – MTC</span>
           </div>
           <div class="pricebox">
@@ -1245,17 +1303,17 @@
     <div class="cat-bar" onclick="toggleCat(this)">
       <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 4-5 7-5 10a5 5 0 0010 0c0-3-2-6-5-10z"></path></svg>
       <span class="cat-name">Instalaciones Sanitarias</span>
-      <span class="cat-count">3 aplicativos</span>
+      <span class="cat-count">4 aplicativos</span>
       <svg class="cat-chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"></path></svg>
     </div>
     <div class="cat-wrap">
     <div class="cat-stack">
 
-      <!-- 07 Dotaciones de Agua Fría IS.010 -->
+      <!-- 08 Dotaciones de Agua Fría IS.010 -->
       <article class="acc">
         <div class="acc-head" onclick="toggleAcc(this)">
           <div class="acc-title">
-            <span class="acc-num">07</span>
+            <span class="acc-num">08</span>
             <span class="acc-name">Dotaciones de Agua Fría IS.010</span>
           </div>
           <div class="pricebox">
@@ -1311,11 +1369,11 @@
         </div>
       </article>
 
-      <!-- 08 Red de Agua – Ruta Crítica -->
+      <!-- 09 Red de Agua – Ruta Crítica -->
       <article class="acc">
         <div class="acc-head" onclick="toggleAcc(this)">
           <div class="acc-title">
-            <span class="acc-num">08</span>
+            <span class="acc-num">09</span>
             <span class="acc-name">Red de Agua — Ruta Crítica</span>
           </div>
           <div class="pricebox">
@@ -1371,11 +1429,11 @@
         </div>
       </article>
 
-      <!-- 09 Red de Desagüe – Ruta Crítica -->
+      <!-- 10 Red de Desagüe – Ruta Crítica -->
       <article class="acc">
         <div class="acc-head" onclick="toggleAcc(this)">
           <div class="acc-title">
-            <span class="acc-num">09</span>
+            <span class="acc-num">10</span>
             <span class="acc-name">Red de Desagüe — Ruta Crítica</span>
           </div>
           <div class="pricebox">
@@ -1431,6 +1489,64 @@
         </div>
       </article>
 
+      <!-- 11 Conexión de Agua Potable -->
+      <article class="acc">
+        <div class="acc-head" onclick="toggleAcc(this)">
+          <div class="acc-title">
+            <span class="acc-num">11</span>
+            <span class="acc-name">Conexión Domiciliaria de Agua Potable <span class="badge new">Nuevo</span></span>
+          </div>
+          <div class="pricebox">
+            <div class="pricebox-left">
+              <div class="px-old-row">
+                <span class="px-antes">Antes</span>
+                <span class="px-old">S/ 89</span>
+                <span class="px-save">−22%</span>
+              </div>
+              <div class="px-now-row">
+                <span class="px-now"><span class="cur">S/</span>69</span>
+                <span class="px-launch"><svg><use href="#ico-bolt"></use></svg>Lanzamiento</span>
+              </div>
+            </div>
+            <div class="pricebox-right">
+              <span class="px-save-amt">Ahorras<br><b>S/ 20</b></span>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn btn-buy" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20Conexi%C3%B3n%20Domiciliaria%20de%20Agua%20Potable" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-wa"></use></svg>
+              Comprar por WhatsApp
+            </a>
+            <button class="btn btn-toggle" onclick="event.stopPropagation();toggleAcc(this.closest('.acc').querySelector('.acc-head'))">
+              Detalles <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"></path></svg>
+            </button>
+          </div>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <h4 class="ok"><svg class="h-ico"><use href="#ico-check"></use></svg>Qué incluye</h4>
+            <ul>
+              <li>Datos del proyecto: tipo de edificación, sistema de abastecimiento (cisterna, tanque elevado, directo, hidroneumático) y demanda diaria.</li>
+              <li>Caudal de diseño automático por llenado de depósito o manual con justificación por demanda simultánea.</li>
+              <li>Catálogo de tuberías (HDPE PE100, PVC-U, acero galvanizado) con diámetro interior y rugosidad asociada.</li>
+              <li>Configuración de medidor: catálogo SEDAPAL (Zenner MTKD/MTKDI) con pérdida según OIML R49 o ingreso manual.</li>
+              <li>Ruta hidráulica multitramo con accesorios editables y coeficientes K por método Crane TP-410.</li>
+              <li>Pérdidas por fricción con Darcy-Weisbach y Colebrook-White, pérdidas locales y del medidor.</li>
+              <li>Verificación de presiones, velocidades, longitud máxima y diagnóstico del medidor (IS.010 / OS.050 / SEDAPAL).</li>
+              <li>Memoria paso a paso con ejemplo predefinido, guardado en JSON e impresión en PDF.</li>
+            </ul>
+            <h4 class="no"><svg class="h-ico"><use href="#ico-x"></use></svg>Qué NO incluye</h4>
+            <ul class="no">
+              <li>No calcula la dotación diaria; ese paso debe hacerse previamente según IS.010 Anexo 2.</li>
+              <li>No evalúa la presión real en la red pública; ese dato debe venir de la EPS o de un aforo.</li>
+              <li>No diseña redes ramificadas ni múltiples puntos de entrega; cubre una conexión con un único punto de llegada.</li>
+              <li>No verifica golpe de ariete ni protección contra sobrepresiones en la conexión.</li>
+              <li>No reemplaza el criterio del ingeniero sanitario ni la revisión de IS.010 y OS.050.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
     </div>
     </div>
   </div>
@@ -1440,17 +1556,17 @@
     <div class="cat-bar" onclick="toggleCat(this)">
       <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path><path d="M2 11c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path><path d="M2 6c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path></svg>
       <span class="cat-name">Hidráulica y Saneamiento</span>
-      <span class="cat-count">3 aplicativos</span>
+      <span class="cat-count">5 aplicativos</span>
       <svg class="cat-chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"></path></svg>
     </div>
     <div class="cat-wrap">
     <div class="cat-stack">
 
-      <!-- 10 Sistema de Bombeo -->
+      <!-- 12 Sistema de Bombeo -->
       <article class="acc">
         <div class="acc-head" onclick="toggleAcc(this)">
           <div class="acc-title">
-            <span class="acc-num">10</span>
+            <span class="acc-num">12</span>
             <span class="acc-name">Sistema de Bombeo e Impulsión</span>
           </div>
           <div class="pricebox">
@@ -1506,11 +1622,11 @@
         </div>
       </article>
 
-      <!-- 11 Biodigestor -->
+      <!-- 13 Biodigestor -->
       <article class="acc">
         <div class="acc-head" onclick="toggleAcc(this)">
           <div class="acc-title">
-            <span class="acc-num">11</span>
+            <span class="acc-num">13</span>
             <span class="acc-name">Biodigestor Prefabricado IS.020 / IS.010</span>
           </div>
           <div class="pricebox">
@@ -1566,11 +1682,11 @@
         </div>
       </article>
 
-      <!-- 12 Zanjas de Infiltración -->
+      <!-- 14 Zanjas de Infiltración -->
       <article class="acc">
         <div class="acc-head" onclick="toggleAcc(this)">
           <div class="acc-title">
-            <span class="acc-num">12</span>
+            <span class="acc-num">14</span>
             <span class="acc-name">Zanjas de Infiltración IS.020</span>
           </div>
           <div class="pricebox">
@@ -1621,6 +1737,122 @@
               <li>No valida distancias sanitarias reales a pozos, viviendas o taludes.</li>
               <li>No reemplaza un estudio geotécnico, hidrogeológico o ambiental.</li>
               <li>No genera planos constructivos finales ni metrados completos.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- 15 Cámara Distribuidora de Caudal -->
+      <article class="acc">
+        <div class="acc-head" onclick="toggleAcc(this)">
+          <div class="acc-title">
+            <span class="acc-num">15</span>
+            <span class="acc-name">Cámara Distribuidora de Caudal <span class="badge new">Nuevo</span></span>
+          </div>
+          <div class="pricebox">
+            <div class="pricebox-left">
+              <div class="px-old-row">
+                <span class="px-antes">Antes</span>
+                <span class="px-old">S/ 119</span>
+                <span class="px-save">−25%</span>
+              </div>
+              <div class="px-now-row">
+                <span class="px-now"><span class="cur">S/</span>89</span>
+                <span class="px-launch"><svg><use href="#ico-bolt"></use></svg>Lanzamiento</span>
+              </div>
+            </div>
+            <div class="pricebox-right">
+              <span class="px-save-amt">Ahorras<br><b>S/ 30</b></span>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn btn-buy" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20C%C3%A1mara%20Distribuidora%20de%20Caudal" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-wa"></use></svg>
+              Comprar por WhatsApp
+            </a>
+            <button class="btn btn-toggle" onclick="event.stopPropagation();toggleAcc(this.closest('.acc').querySelector('.acc-head'))">
+              Detalles <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"></path></svg>
+            </button>
+          </div>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <h4 class="ok"><svg class="h-ico"><use href="#ico-check"></use></svg>Qué incluye</h4>
+            <ul>
+              <li>Diseño hidráulico de cámaras de distribución por gravedad con vertederos de cresta delgada (triangular o rectangular).</li>
+              <li>De 2 a 12 salidas con distribución uniforme o diferenciada por cada vertedero.</li>
+              <li>Tres modos de cálculo: dimensionar (hallar θ o b), despejar carga h₁, o verificar caudal real vs. diseño.</li>
+              <li>Coeficientes efectivos Kindsvater-Carter con tablas de interpolación (Bos 1976 / French Cap. 8).</li>
+              <li>Diseño de la cámara de calma: ancho total, tirante, velocidad de aproximación y verificación CONAGUA.</li>
+              <li>Verificación de cada tubería de salida: velocidad, carga requerida, ahogamiento y alertas automáticas.</li>
+              <li>Tres esquemas SVG automáticos: planta, corte longitudinal y vista frontal del muro vertedor.</li>
+              <li>Guardado y carga del proyecto en JSON, guía con ecuaciones y referencias, e impresión en PDF.</li>
+            </ul>
+            <h4 class="no"><svg class="h-ico"><use href="#ico-x"></use></svg>Qué NO incluye</h4>
+            <ul class="no">
+              <li>No modela flujo en 3D ni sustituye un análisis hidráulico avanzado (CFD).</li>
+              <li>No diseña la estructura de concreto ni el refuerzo; solo propone espesores por criterio geométrico.</li>
+              <li>No calcula pérdidas de carga en tuberías más allá del criterio simplificado PNSR.</li>
+              <li>No dimensiona automáticamente los diámetros de salida; el usuario los selecciona del catálogo.</li>
+              <li>No reemplaza la revisión del ingeniero ni las fuentes de referencia (CONAGUA, PNSR, French, Sotelo).</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- 16 Lechos de Secado -->
+      <article class="acc">
+        <div class="acc-head" onclick="toggleAcc(this)">
+          <div class="acc-title">
+            <span class="acc-num">16</span>
+            <span class="acc-name">Lechos de Secado de Lodos <span class="badge new">Nuevo</span></span>
+          </div>
+          <div class="pricebox">
+            <div class="pricebox-left">
+              <div class="px-old-row">
+                <span class="px-antes">Antes</span>
+                <span class="px-old">S/ 89</span>
+                <span class="px-save">−22%</span>
+              </div>
+              <div class="px-now-row">
+                <span class="px-now"><span class="cur">S/</span>69</span>
+                <span class="px-launch"><svg><use href="#ico-bolt"></use></svg>Lanzamiento</span>
+              </div>
+            </div>
+            <div class="pricebox-right">
+              <span class="px-save-amt">Ahorras<br><b>S/ 20</b></span>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn btn-buy" href="https://wa.me/51926179993?text=Hola%2C%20quiero%20Lechos%20de%20Secado%20de%20Lodos" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-wa"></use></svg>
+              Comprar por WhatsApp
+            </a>
+            <button class="btn btn-toggle" onclick="event.stopPropagation();toggleAcc(this.closest('.acc').querySelector('.acc-head'))">
+              Detalles <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4l4 4 4-4"></path></svg>
+            </button>
+          </div>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <h4 class="ok"><svg class="h-ico"><use href="#ico-check"></use></svg>Qué incluye</h4>
+            <ul>
+              <li>Origen del lodo configurable: primario, activados, UASB/RAFA o mixto, con producción por caudal o por DQO removida.</li>
+              <li>Doble criterio de área obligatorio: por volumen/profundidad y por carga superficial; adopta la mayor (OS.090).</li>
+              <li>Ciclo operativo completo: secado, limpieza, preparación, intervalo entre descargas y celdas de reserva.</li>
+              <li>Estimación de lixiviados por balance de agua (CONAGUA) o método porcentual, y caudal de drenaje.</li>
+              <li>Balance anual de agua y evaporación, y volumen de torta seca para dimensionar la evacuación.</li>
+              <li>Verificaciones geométricas: ancho por método de retiro, largo, profundidad, losa de impacto y borde libre.</li>
+              <li>Optimización del área total (W × L) para la menor huella posible, respetando los criterios de diseño.</li>
+              <li>Esquemas SVG de corte y planta, ejemplo predefinido, guardado en JSON e impresión en PDF.</li>
+            </ul>
+            <h4 class="no"><svg class="h-ico"><use href="#ico-x"></use></svg>Qué NO incluye</h4>
+            <ul class="no">
+              <li>No diseña tuberías, bombas ni canales; entrega volúmenes base que requieren diseño de detalle.</li>
+              <li>No valida la calidad del lodo (metales, patógenos) ni requisitos ambientales de disposición final.</li>
+              <li>No diseña las estructuras de concreto (muros, losas) más allá de criterios geométricos y operativos.</li>
+              <li>No simula el secado con variables climáticas horarias ni predice tiempos fuera de rangos empíricos.</li>
+              <li>No sustituye el criterio del ingeniero ni la revisión integral de OS.090.</li>
             </ul>
           </div>
         </div>
